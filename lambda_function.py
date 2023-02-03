@@ -57,9 +57,9 @@ def lambda_handler(event, context):
     if deploy_status == "SUCCEEDED":
       status_text = ":white_check_mark: *SUCCEEDED*"
       if "dev" in application_name:
-        website_url = "http://13.124.38.72/"
+        website_url = "https://www.google.com/"
       else:
-        website_url = "https://www.claboutside.com/"
+        website_url = "https://aws.amazon.com/"
       result_component = {
       "type": "actions",
       "elements": [

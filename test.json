@@ -1,0 +1,48 @@
+{
+  "Records": [
+    {
+      "EventVersion": "1.0",
+      "EventSubscriptionArn": "arn:aws:sns:TEST",
+      "EventSource": "aws:sns",
+      "Sns": {
+        "Subject": "test notify",
+        "Timestamp": "2019-01-02T12:45:07.000Z",
+        "MessageId": "12345",
+        "MessageAttributes": {
+          "Test": {
+            "Type": "String",
+            "Value": "TestString"
+          },
+          "TestBinary": {
+            "Type": "Binary",
+            "Value": "TestBinary"
+          }
+        },
+        "Type": "Notification",
+        "Message": {
+          "region": "ap-northeast-2",
+          "accountId": "12345",
+          "eventTriggerName": "개발서버 Back-End 배포 결과 알림",
+          "applicationName": "dev-backend",
+          "deploymentId": "d-12345",
+          "deploymentGroupName": "clab-dev",
+          "createTime": "Wed Feb 01 05:48:26 UTC 2023",
+          "completeTime": "Wed Feb 01 05:48:40 UTC 2023",
+          "deploymentOverview": {
+            "Succeeded": 0,
+            "Failed": 1,
+            "Skipped": 0,
+            "InProgress": 0,
+            "Pending": 0
+          },
+          "status": "FAILED",
+          "errorInformation": {
+            "ErrorCode": "HEALTH_CONSTRAINTS",
+            "ErrorMessage": "The overall deployment failed because too many individual instances failed deployment, too few healthy instances are available for deployment, or some instances in your deployment group are experiencing problems."
+          },
+          "rollbackInformation": {}
+        }
+      }
+    }
+  ]
+}
